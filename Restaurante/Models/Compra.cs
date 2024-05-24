@@ -9,7 +9,7 @@
         public decimal PrecioTotal { get; set; }
         public DateTime FechaCompra { get; set; }
 
-        public Ingrediente Ingrediente { get; set; }
+        public Ingrediente Ingredientes { get; set; }
         public Proveedor proveedor { get; set; }
     }
 }

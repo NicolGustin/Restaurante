@@ -6,5 +6,6 @@
         public string Nombre { get; set; }
         public decimal PrecioVenta { get; set; }
         public string Descripción { get; set; }
+        public ICollection<Ingrediente> Ingredientes { get; set; }
     }
 }

@@ -1,7 +1,10 @@
-﻿namespace Restaurante.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Restaurante.Models
 {
     public class Proveedor
     {
+        [Key]
         public int IdProveedor { get; set; }
         public string NombreEmpresa { get; set; }
         public string Contacto { get; set; }

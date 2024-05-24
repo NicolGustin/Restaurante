@@ -10,7 +10,7 @@ namespace Restaurante.Models
         public double CantidadDisponible { get; set; }
         public string UnidadMedida { get; set; }
         public decimal PrecioUnitario { get; set; }
-        public int DetallePlato { get; set; }
-        public required DetallePlato DetallePlatos { get; set; }
+        public int PlatoId { get; set; }
+        public required Plato Platos { get; set; }
     }
 }
