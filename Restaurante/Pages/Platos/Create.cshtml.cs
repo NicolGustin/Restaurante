@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Restaurante.Data;
 using Restaurante.Models;
 
-namespace Restaurante.Pages.Ingredientes
+namespace Restaurante.Pages.Platos
 {
     public class CreateModel : PageModel
     {
@@ -25,13 +25,14 @@ namespace Restaurante.Pages.Ingredientes
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid||_context.Platos==null||Ingrediente==null)
+            if (!ModelState.IsValid||_context.Platos==null||Plato==null)
             {
                 return Page();
             }
 
-            _context.Platos.Add(Ingrediente);
+            _context.Platos.Add(Plato);
             await _context.SaveChangesAsync();
             return RedirectToPage("./Index");
         }
+    }
 }

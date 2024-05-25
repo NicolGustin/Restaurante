@@ -25,7 +25,7 @@ namespace Restaurante.Pages.Ingredientes
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid ||_context.Ingredientes==null||Ingrediente== null)
+            if (!ModelState.IsValid||_context.Ingredientes==null||Ingrediente == null)
             {
                 return Page();
             }
@@ -34,4 +34,5 @@ namespace Restaurante.Pages.Ingredientes
             await _context.SaveChangesAsync();
             return RedirectToPage("./Index");
         }
+    }
 }
