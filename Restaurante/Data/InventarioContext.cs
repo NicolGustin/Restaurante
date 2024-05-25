@@ -13,12 +13,7 @@ namespace Restaurante.Data
         public DbSet<Plato> Platos { get; set; }
         public DbSet<DetallePlato> DetallePlatos { get; set; }
         public DbSet<Proveedor> Proveedores { get; set; }
-        public DbSet<Compra> Compras { get; set; }
+        public DbSet<Pedido> Pedidos { get; set; }
 
-        /**protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(
-            "Server=(localdb)\\mssqllocaldb;Database=InRestaurante;Trusted_Connection=True;");
-        }**/
     }
 }
