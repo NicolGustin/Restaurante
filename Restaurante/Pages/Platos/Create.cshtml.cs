@@ -21,16 +21,16 @@ namespace Restaurante.Pages.Ingredientes
 
         [BindProperty]
 
-        public Ingrediente Ingrediente { get; set; } = default!;
+        public Plato Plato { get; set; } = default!;
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid ||_context.Ingredientes==null||Ingrediente== null)
+            if (!ModelState.IsValid||_context.Platos==null||Ingrediente==null)
             {
                 return Page();
             }
 
-            _context.Ingredientes.Add(Ingrediente);
+            _context.Platos.Add(Ingrediente);
             await _context.SaveChangesAsync();
             return RedirectToPage("./Index");
         }
