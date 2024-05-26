@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <Content Remove="Pages\Ingredientes\Index.cshtml" />
-    <Content Remove="Pages\Pedido\Pedido.cshtml" />
+    <Content Remove="Pages\Pedidos\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,16 +30,11 @@
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="Pages\Ingredientes\Index.cshtml" />
-    <_ContentIncludedByDefault Remove="Pages\Pedido\Pedido.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="Pages\Ingredientes\Index.cshtml" />
-    <None Include="Pages\Pedido\Pedido.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\Pedido\Pedido.cshtml" />
+    <None Include="Pages\Pedidos\Index.cshtml" />
   </ItemGroup>
 
 </Project>
