@@ -1,0 +1,48 @@
+﻿@page
+@model Restaurante.Pages.Pedido.PedidoModel
+@{
+    ViewData["Title"] = "Index Pedidos";
+}
+<h1>Index Pedidos</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-success">Crear Nueva</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedidos[0].FechaCompra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedidos[0].Total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedidos[0].Proveedor.NombreEmpresa)
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Pedidos)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaCompra)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Proveedor.NombreEmpresa)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.IdCompra" class="btn btn-warning">Editar</a>
+                    <a asp-page="./Details" asp-route-id="@item.IdCompra" class="btn btn-info">Detalles</a>
+                    <a asp-page="./Delete" asp-route-id="@item.IdCompra" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

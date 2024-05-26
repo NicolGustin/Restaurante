@@ -7,6 +7,7 @@ namespace Restaurante.Models
     {
         [Key]
         public int IdPedido { get; set; }
+        public int Compra {  get; set; }
 
         [ForeignKey("Proveedor")]
         public int IdProveedor { get; set; }
